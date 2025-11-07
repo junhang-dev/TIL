@@ -17,8 +17,8 @@
 AI 에이전트(CrewAI), LLM 연동 및 AI 서비스 개발 관련 학습 내용을 정리합니다.
 
 * **CrewAI**
-    * [셀프 호스팅 Firecrawl API를 CrewAI 커스텀 툴로 연동하기](./02-AI-Engineering/CrewAI/Custom-Tool-Firecrawl.md)
-    * [AI Agent Guardrail의 필요성 및 구현](./02-AI-Engineering/CrewAI/guardrail.md)
+    * [셀프 호스팅 Firecrawl API를 CrewAI 커스텀 툴로 연동하기](./02-AI-Engineering/Tool/Custom-Tool-Firecrawl.md)
+    * [AI Agent Guardrail의 필요성 및 구현](./02-AI-Engineering/Tool/guardrail.md)
 * **Concepts**
     * [RAG와 파인튜닝(Finetuning)의 차이점 및 적용 기준](./02-AI-Engineering/Concepts/RAG-vs-Finetuning.md)
 
