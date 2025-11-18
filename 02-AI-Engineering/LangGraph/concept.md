@@ -32,3 +32,23 @@ State가 업데이트될 때의 동작 방식을 정의합니다.
   ```python
   # 예시: 리스트에 메시지를 append 하는 방식
   messages: Annotated[list, operator.add]
+
+## 3. 제어 흐름과 순환 (Control Flow & Cycles)
+
+- **Cycles (순환):** Agent의 핵심. LLM이 문제를 해결할 때까지 `생각 -> 행동 -> 관찰` 과정을 반복(Loop)할 수 있게 함.
+- **Special Nodes:**
+  - `START`: 그래프 실행 시 사용자 입력을 State로 변환하여 주입하는 진입점.
+  - `END`: 그래프 실행을 종료하고 최종 State를 반환하는 지점.
+
+## 4. 고급 기능 및 최적화 (Advanced & Optimization)
+
+### 💾 Checkpointer (Persistence & Memory)
+- **Memory:** 그래프의 각 단계(Step)마다 State의 스냅샷을 저장.
+- **Human-in-the-loop:** 실행을 일시 정지하고, 사람이 개입하여 승인/수정 후 다시 실행 가능.
+- **Time Travel:** 과거의 특정 시점으로 되돌아가서 다른 경로로 실행 가능.
+
+### ⚡ Node Caching
+- 토큰 소모가 많거나 시간이 오래 걸리는 노드의 결과를 캐싱하여 비효율 방지.
+
+### 🛠️ Compilation (컴파일)
+- `builder.compile()`을 호출하여 그래프 구조를 실행 가능한 `Runnable` 객체로 변환해야 함.
