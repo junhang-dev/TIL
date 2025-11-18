@@ -52,3 +52,26 @@ State가 업데이트될 때의 동작 방식을 정의합니다.
 
 ### 🛠️ Compilation (컴파일)
 - `builder.compile()`을 호출하여 그래프 구조를 실행 가능한 `Runnable` 객체로 변환해야 함.
+
+## 5. 심화 패턴 및 철학 (Advanced Patterns & Philosophy)
+
+### 🚀 동적 제어 (Dynamic Control)
+
+#### `Send` API (Parallelism)
+- **개념:** 1:N 실행. `Map-Reduce` 패턴처럼 하나의 작업을 여러 개로 쪼개 **동시에 병렬 실행**할 때 사용.
+- **장점:** 순차 실행보다 속도가 획기적으로 빠름.
+
+#### `Command` API (The Cheat Key)
+- **개념:** **State 업데이트**와 **다음 노드 지정(Navigation)**을 동시에 수행.
+- **사용 시점:**
+  - Conditional Edge의 로직이 너무 복잡해질 때.
+  - 노드 내부 로직에 따라 즉각적으로 경로를 변경하면서 데이터도 저장해야 할 때.
+- **주의점:** 남용하면 그래프의 구조적 예측 가능성이 떨어질 수 있음(Spaghetti Code 주의).
+
+### 🧠 LangGraph의 본질 (Essence)
+
+> **"LangGraph는 상태 관리 프로그램(State Management System)이다."**
+
+- **AI 에이전트의 OS:** LLM은 두뇌일 뿐, 기억과 행동의 순서를 제어하는 것은 LangGraph(State)이다.
+- **확장성:** UI 프레임워크(Streamlit, Vercel AI SDK 등)와 무관하게 독립적으로 로직을 통합할 수 있다.
+- **가치:** 1995년의 Web처럼, 미래 AI Agent 서비스의 근간이 될 기술.
