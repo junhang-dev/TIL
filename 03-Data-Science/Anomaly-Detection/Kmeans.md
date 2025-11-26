@@ -50,6 +50,8 @@ def find_optimal_k_kneedle(k_range, inertia_values):
     # 3. 최대 거리 지점 반환
     return k_range[np.argmax(distances)]
 
+---
+
 ## 3. 전략적 통찰: 왜 K-Means인가? (Business Alignment)
 
 학술적으로는 Auto-Encoder(딥러닝)나 TDA(위상 데이터 분석)가 더 고도화된 방법일 수 있지만, **현장(Field) 적용** 관점에서는 K-Means가 전략적 승리 요인을 가짐.
