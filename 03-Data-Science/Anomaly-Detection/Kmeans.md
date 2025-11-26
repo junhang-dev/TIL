@@ -49,6 +49,7 @@ def find_optimal_k_kneedle(k_range, inertia_values):
         
     # 3. 최대 거리 지점 반환
     return k_range[np.argmax(distances)]
+'''
 
 ---
 
